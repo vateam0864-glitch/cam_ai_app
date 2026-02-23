@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camera Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">Camera Rule System</h1>
+
+<div class="add-section">
+    <input id="name" placeholder="Camera Name">
+    <input id="url" placeholder="Camera URL">
+    <button onclick="addCamera()">Add Camera</button>
+    <button onclick="setMode('polygon')">Add Polygon</button>
+    <button onclick="setMode('line')">Add Rule</button>
+</div>
+
+<div id="cameraList" class="camera-grid"></div>
+
+<div id="previewSection"></div>
+
+<h2>Alerts</h2>
+<div id="alertList"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

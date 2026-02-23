@@ -1,0 +1,33 @@
+{
+    "camera_id": 1,
+    "camera_name": "gbotz",
+    "url": "rtsp://admin:Greenbotz%401211@172.16.1.245/cam/realmonitor?channel=1&subtype=0",
+    "resolution": {
+        "width": 1920,
+        "height": 1080
+    },
+    "polygon": [
+        [
+            582,
+            2
+        ],
+        [
+            589,
+            609
+        ],
+        [
+            779,
+            607
+        ],
+        [
+            786,
+            4
+        ]
+    ],
+    "line": {
+        "x1": 513,
+        "y1": 36,
+        "x2": 520,
+        "y2": 696
+    }
+}

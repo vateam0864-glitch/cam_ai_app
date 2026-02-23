@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+.env
+.git/
+.gitignore
+*.db
+data/
+configs/
+debug.log
+yolov8s.pt
+yolov8n.pt

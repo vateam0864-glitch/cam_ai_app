@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: ./backend
+    container_name: camera-ai-backend
+    restart: always
+    network_mode: host
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/configs:/app/configs
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  frontend:
+    build: ./frontend
+    container_name: camera-ai-frontend
+    restart: always
+    network_mode: host

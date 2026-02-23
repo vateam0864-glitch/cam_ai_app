@@ -1,0 +1,47 @@
+[
+    {
+        "timestamp": "2026-02-18T17:47:33.929386",
+        "camera_id": "camera4",
+        "event_type": "IN",
+        "count": 1,
+        "image": "camera4_IN_20260218_174733.jpg",
+        "track_id": 21,
+        "status": "success"
+    },
+    {
+        "timestamp": "2026-02-18T18:57:24.528278",
+        "camera_id": "camera4",
+        "event_type": "OUT",
+        "count": 1,
+        "image": "camera4_OUT_20260218_185724.jpg",
+        "track_id": 168,
+        "status": "success"
+    },
+    {
+        "timestamp": "2026-02-18T19:50:41.144732",
+        "camera_id": "camera4",
+        "event_type": "OUT",
+        "count": 1,
+        "image": "camera4_OUT_20260218_195041.jpg",
+        "track_id": 141,
+        "status": "success"
+    },
+    {
+        "timestamp": "2026-02-18T19:59:23.439090",
+        "camera_id": "camera4",
+        "event_type": "IN",
+        "count": 1,
+        "image": "camera4_IN_20260218_195923.jpg",
+        "track_id": 205,
+        "status": "success"
+    },
+    {
+        "timestamp": "2026-02-18T20:05:49.386273",
+        "camera_id": "camera4",
+        "event_type": "IN",
+        "count": 1,
+        "image": "camera4_IN_20260218_200549.jpg",
+        "track_id": 364,
+        "status": "success"
+    }
+]

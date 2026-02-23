@@ -1,0 +1,33 @@
+{
+    "camera_id": 4,
+    "camera_name": "camera_4",
+    "url": "rtsp://admin:Greenbotz%401211@172.16.1.245/cam/realmonitor?channel=1&subtype=0",
+    "resolution": {
+        "width": 1920,
+        "height": 1080
+    },
+    "polygon": [
+        [
+            89,
+            27
+        ],
+        [
+            104,
+            572
+        ],
+        [
+            769,
+            595
+        ],
+        [
+            763,
+            13
+        ]
+    ],
+    "line": {
+        "x1": 532,
+        "y1": 27,
+        "x2": 538,
+        "y2": 595
+    }
+}

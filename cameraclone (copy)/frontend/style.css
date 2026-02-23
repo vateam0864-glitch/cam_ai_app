@@ -1,0 +1,250 @@
+body {
+    background-color: #141414;
+    color: white;
+    font-family: Arial;
+    background-image: url('nat.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background overlay for better visibility */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.7);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.title {
+    text-align: center;
+    color: #f70404;
+    position: relative;
+    z-index: 1;
+    margin: 20px 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.add-section {
+    text-align: center;
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+input {
+    padding: 10px 15px;
+    margin: 5px;
+    background: #1f1f1f;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #E50914;
+}
+
+button {
+    padding: 10px 20px;
+    background: #E50914;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+button:hover {
+    background: #b00610;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.5);
+}
+
+.camera-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.camera-card {
+    background: rgba(31, 31, 31, 0.95);
+    padding: 15px;
+    margin: 10px;
+    width: 220px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.camera-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
+}
+
+/* Preview Section - Simple centering */
+#previewSection {
+    text-align: center;
+    margin: 30px auto;
+    position: relative;
+    z-index: 1;
+    max-width: 95%;
+}
+
+/* Live Preview title */
+#previewSection h3 {
+    color: #E50914;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    display: inline-block;
+    margin: 20px auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#videoStream {
+    width: 100%;
+    max-width: 640px;
+    display: block;
+    border-radius: 8px;
+}
+
+#drawCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+}
+
+/* Force all buttons to appear BELOW video in horizontal row */
+#previewSection button {
+    padding: 12px 24px;
+    background: #E50914;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    margin: 8px;
+    display: inline-block !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+}
+
+#previewSection button:hover {
+    background: #b00610;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.5);
+}
+
+/* Container for buttons - ensures horizontal layout */
+#previewSection > div {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Alerts Section */
+h2 {
+    text-align: center;
+    color: #E50914;
+    margin: 40px 0 20px 0;
+    font-size: 2em;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#alertList {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(31, 31, 31, 0.9);
+    border-radius: 8px;
+    min-height: 60px;
+    max-width: 90%;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+}
+
+#alertList:empty::before {
+    content: "No alerts";
+    color: #888;
+    font-style: italic;
+}
+
+/* Alert items */
+.alert-item {
+    background: rgba(229, 9, 20, 0.2);
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-left: 4px solid #E50914;
+    border-radius: 4px;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8em;
+    }
+    
+    #previewSection h3 {
+        font-size: 1.5em;
+    }
+    
+    input {
+        width: 80%;
+        margin: 5px auto;
+        display: block;
+    }
+    
+    button {
+        width: 80%;
+        margin: 5px auto;
+        display: block;
+    }
+    
+    .camera-card {
+        width: 90%;
+    }
+    
+    #videoStream {
+        max-width: 100%;
+    }
+    
+    #previewSection button {
+        width: 45%;
+        min-width: unset;
+    }
+}
