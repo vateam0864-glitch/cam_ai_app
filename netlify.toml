@@ -1,0 +1,13 @@
+[build]
+  # Tell Netlify that the actual site files are in this subfolder
+  base = "cameraclone (copy)/frontend"
+  # No build command is needed for this vanilla JS site
+  command = ""
+  # The directory to publish (relative to 'base')
+  publish = "."
+
+[[redirects]]
+  # Proxy internal /api requests to the backend (placeholder URL)
+  from = "/api/*"
+  to = "https://your-backend-api.onrender.com/:splat"
+  status = 200

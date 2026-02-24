@@ -164,3 +164,4 @@ build/
 
 # Project specific
 cameraclone (copy)/.venv/
+*.zip
